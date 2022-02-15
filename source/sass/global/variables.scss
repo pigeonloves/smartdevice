@@ -1,0 +1,25 @@
+// Desktop First Adaptive Layout
+
+//Breakpoint
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1024px;
+
+$container: 1410px;
+$container-min-mobile: 320px;
+$container-min-desktop: 1000px;
+$container-max: 1450px;
+
+// Retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Colors
+$white: #ffffff;
+$light-line: #ebebeb;
+$social-grey: #cdcdcd;
+$light-grey: #c4c4c4;
+$grayish-green: #626962;
+$dark-gray: #666666;
+$dark-blue: #1b2d37;
+$pure-blue: #00b2ff;
