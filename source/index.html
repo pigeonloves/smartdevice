@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Device | Печатные платы</title>
+    <link rel="preload" href="fonts/ptmono.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/roboto-condensed.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div style="display: none;">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+
+    <header class="header">
+      <div class="container header__container">
+        <a aria-label="Логотип проекта Smart Device">
+          <svg class="header__logo" width="202" height="52">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+
+        <ul class="header__links">
+          <li class="header__item header__item--email">
+            <a class="header__link" href="mailto:info@sd.ru">
+              <svg width="19" height="14">
+                <use xlink:href="#icon-envelope"></use>
+              </svg>
+              <span>info@sd.ru</span>
+            </a>
+          </li>
+          <li class="header__item header__item--phone">
+            <a class="header__link" href="tel:+74950005252">
+              <svg width="18" height="18">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </li>
+        </ul>
+
+        <button class="button modal-overlay--open" type="button">Заказать звонок</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__text">
+            <h1>Печатные платы</h1>
+            <p>Производство и монтаж, поставка комплектующих, блоков&nbsp;и&nbsp;модулей</p>
+            <button class="button button--blue button--blue-big" type="button">Получить бесплатную консультацию</button>
+            <button class="button button--blue button--blue-small" type="button">Бесплатная консультация</button>
+          </div>
+          <div class="hero__image">
+            <picture>
+              <!-- 1x: 294px; 2x: 588px -->
+              <source media="(max-width: 767px)" srcset="img/hero-img-mobile@1x.webp 1x, img/hero-img-mobile@2x.webp 2x" type="image/webp">
+              <!-- 1x: 260px; 2x: 520px -->
+              <source media="(max-width: 1023px)" srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x" type="image/webp">
+              <!-- 1x: 705px; 2x: 1410px -->
+              <source media="(min-width: 1024px)" srcset="img/hero-img-desktop@1x.webp 1x, img/hero-img-desktop@2x.webp 2x" type="image/webp">
+              <!-- 1x: 294px; 2x: 588px -->
+              <source media="(max-width: 767px)" srcset="img/hero-img-mobile@1x.png 1x, img/hero-img-mobile@2x.png 2x">
+              <!-- 1x: 260px; 2x: 520px -->
+              <source media="(max-width: 1023px)" srcset="img/hero-img-tablet@1x.png 1x, img/hero-img-tablet@2x.png 2x">
+              <!-- 1x: 705px; 2x: 1410px -->
+              <img src="img/hero-img-desktop@1x.png" srcset="img/hero-img-desktop@2x.png 2x" width="705" height="515" alt="Печатные платы от производителя">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <div class="main-content__about-container">
+        <section class="advantages" id="advantages">
+          <div class="container advantages__container">
+            <h2 class=" visually-hidden">Преимущества</h2>
+            <ul class="advantages__list list-reset">
+              <li class="advantages__item advantages__item--stopwatch">
+                <svg width="29" height="35">
+                  <use xlink:href="#icon-stopwatch"></use>
+                </svg>
+                <h3>Оперативные сроки</h3>
+                <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+              </li>
+              <li class="advantages__item advantages__item--hired">
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-hired"></use>
+                </svg>
+                <h3>Крупные поставщики</h3>
+                <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+              </li>
+              <li class="advantages__item
+              advantages__item--detective">
+                <svg width="36" height="31">
+                  <use xlink:href="#icon-detective"></use>
+                </svg>
+                <h3>Полная конфиденциальность</h3>
+                <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+              </li>
+              <li class="advantages__item advantages__item--tag">
+                <svg width="35" height="35">
+                  <use xlink:href="#icon-tag"></use>
+                </svg>
+                <h3>Персонализация стоимости</h3>
+                <p>Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="about">
+          <div class="container about__container">
+            <h2>О компании</h2>
+            <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+            <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+            <a class="button button--blue-border" href="#">Подробнее</a>
+          </div>
+        </section>
+      </div>
+
+      <section class="services">
+        <div class="container services__container">
+          <h2>Service Device предлагает следующие товары и&nbsp;услуги</h2>
+          <ul class="list-reset services__list">
+            <li class="services__item">
+              <a href="#">
+                <figure>
+                  <figcaption>Производство печатных плат</figcaption>
+                  <picture>
+                    <!-- 1x: 290px; 2x: 580px -->
+                    <source media="(max-width: 767px)" srcset="img/production-mobile@1x.webp 1x, img/production-mobile@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 720px; 2x: 1440px -->
+                    <source media="(max-width: 1023px)" srcset="img/production-tablet@1x.webp 1x, img/production-tablet@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 370px; 2x: 740px -->
+                    <source media="(min-width: 1024px)" srcset="img/production-desktop@1x.webp 1x, img/production-desktop@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 290px; 2x: 580px -->
+                    <source media="(max-width: 767px)" srcset="img/production-mobile@1x.jpg 1x, img/production-mobile@2x.jpg 2x">
+                    <!-- 1x: 720px; 2x: 1440px -->
+                    <source media="(max-width: 1023px)" srcset="img/production-tablet@1x.jpg 1x, img/production-tablet@2x.jpg 2x">
+                    <!-- 1x: 370px; 2x: 740px -->
+                    <img src="img/production-desktop@1x.jpg" srcset="img/production-desktop@2x.jpg 2x" width="260" height="386" alt="Производство печатных плат">
+                  </picture>
+                </figure>
+              </a>
+            </li>
+            <li class="services__item">
+              <a href="#">
+                <figure>
+                  <figcaption>Монтаж печатных плат</figcaption>
+                  <picture>
+                    <!-- 1x: 290px; 2x: 580px -->
+                    <source media="(max-width: 767px)" srcset="img/install-mobile@1x.webp 1x, img/install-mobile@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 720px; 2x: 1440px -->
+                    <source media="(max-width: 1023px)" srcset="img/install-tablet@1x.webp 1x, img/install-tablet@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 370px; 2x: 740px -->
+                    <source media="(min-width: 1024px)" srcset="img/install-desktop@1x.webp 1x, img/install-desktop@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 290px; 2x: 580px -->
+                    <source media="(max-width: 767px)" srcset="img/install-mobile@1x.jpg 1x, img/install-mobile@2x.jpg 2x">
+                    <!-- 1x: 720px; 2x: 1440px -->
+                    <source media="(max-width: 1023px)" srcset="img/install-tablet@1x.jpg 1x, img/install-tablet@2x.jpg 2x">
+                    <!-- 1x: 370px; 2x: 740px -->
+                    <img src="img/install-desktop@1x.jpg" srcset="img/install-desktop@2x.jpg 2x" width="260" height="386" alt="Монтаж печатных плат">
+                  </picture>
+                </figure>
+              </a>
+            </li>
+            <li class="services__item">
+              <a href="#">
+                <figure>
+                  <figcaption>Комплектующие для светотехники</figcaption>
+                  <picture>
+                    <!-- 1x: 290px; 2x: 580px -->
+                    <source media="(max-width: 767px)" srcset="img/detalies-mobile@1x.webp 1x, img/detalies-mobile@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 715px; 2x: 1430px -->
+                    <source media="(max-width: 1023px)" srcset="img/detalies-tablet@1x.webp 1x, img/detalies-tablet@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 370px; 2x: 740px -->
+                    <source media="(min-width: 1024px)" srcset="img/detalies-desktop@1x.webp 1x, img/detalies-desktop@2x.webp 2x" type="image/webp">
+                    <!-- 1x: 290px; 2x: 580px -->
+                    <source media="(max-width: 767px)" srcset="img/detalies-mobile@1x.jpg 1x, img/detalies-mobile@2x.jpg 2x">
+                    <!-- 1x: 720px; 2x: 1440px -->
+                    <source media="(max-width: 1023px)" srcset="img/detalies-tablet@1x.jpg 1x, img/detalies-tablet@2x.jpg 2x">
+                    <!-- 1x: 370px; 2x: 740px -->
+                    <img src="img/detalies-desktop@1x.jpg" srcset="img/detalies-desktop@2x.jpg 2x" width="260" height="386" alt="Комплектующие для светотехники">
+                  </picture>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="write-us" id="consultation">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <div class="container write-us__container">
+          <form class="form form--write-us" action="https://echo.htmlacademy.ru" method="POST">
+            <h3>Остались вопросы? Задайте их нам!</h3>
+            <p>Мы проконсультируем Вас бесплатно</p>
+            <div class="form__area form__area--input">
+              <label class="visually-hidden" for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Имя" required />
+              <label class="visually-hidden" for="phone">Номер телефона</label>
+              <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="14" title="+7, не менее 7 и не более 10 цифр" required />
+            </div>
+            <label class="visually-hidden" for="comment">Поле для ввода сообщения</label>
+            <textarea name="comment" id="comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
+            <div class="form__area form__area--submit">
+              <button class="button button--submit" type="submit">Задать вопрос</button>
+              <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" checked="" required />
+              <label for="agreement">Я согласен на обработку персональных данных</label>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__content">
+          <section class="footer__links">
+            <h2 class="visually-hidden">Cоциальные сети</h2>
+            <svg class="footer__logo" width="216" height="52">
+              <use xlink:href="#icon-logo-footer"></use>
+            </svg>
+            <ul class="footer__social">
+              <li>
+                <a class="footer__link" href="https://www.facebook.com" aria-label="Профиль в социальное сети «Фейсбук»">
+                  <svg width="27" height="27">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer__link" href="https://ok.ru" aria-label="Профиль в социальное сети «Одноклассники»">
+                  <svg width="26" height="26">
+                    <use xlink:href="#icon-ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer__link" href="https://vk.com" aria-label="Профиль в социальное сети «Вконтакте»">
+                  <svg width="26" height="26">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="page-footer__menu">
+            <button class="accordion" type="button" aria-label="Открыть выпадающий список" tabindex="-1">Разделы сайта</button>
+            <div class="accordion__panel accordion__panel--no-js">
+              <ul class="page-footer__list">
+                <li class="page-footer__item page-footer__item--about"><a href="#">О компании</a></li>
+                <li class="page-footer__item page-footer__item--details"><a href="#">Комплектующие</a></li>
+                <li class="page-footer__item page-footer__item--products"><a href="#">Продукты</a></li>
+                <li class="page-footer__item page-footer__item--delivery"><a href="#">Доставка</a></li>
+                <li class="page-footer__item page-footer__item--production"><a href="#">Производство печатных плат</a></li>
+                <li class="page-footer__item page-footer__item--contacts"><a href="#">Контакты</a></li>
+                <li class="page-footer__item page-footer__item--montage"><a href="#">Монтаж печатных плат</a></li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="page-footer__contacts">
+            <button class="accordion accordion--active" type="button" aria-label="Открыть выпадающий список" tabindex="-1">Наш офис</button>
+            <div class="accordion__panel accordion__panel--active">
+              <address>г. Мытищи, Олимпийский проспект,&nbsp;д.10</address>
+              <ul class="page-footer__contacts-list">
+                <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+                <li><a href="tel:+79250038767">+7 (925) 003-87-67</a></li>
+                <li><a href="tel:+792692608079"> +7 (926) 926-080-79</a></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <section class="footer__bottom">
+          <h2 class="visually-hidden">Копирайт</h2>
+          <p class="footer__bottom-copyright">
+            <span>Все права защищены</span>
+            1999-2018&nbsp;SD&nbsp;Service&nbsp;Devices
+          </p>
+          <a href="#">Условия конфиденциальности</a>
+          <p>Developed by <a href="#">wow studio</a></p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
