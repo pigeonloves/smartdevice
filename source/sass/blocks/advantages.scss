@@ -1,0 +1,177 @@
+.advantages__container {
+  padding: 112px 120px 50px;
+}
+
+.advantages__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  position: relative;
+
+  max-width: 570px;
+  width: 50%;
+  min-height: 300px;
+  margin-bottom: 30px;
+  padding: 40px 44px 40px;
+
+  background-color: $white;
+  border: 1px solid $light-line;
+
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  &--detective {
+    svg {
+      margin-bottom: 15px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 3px;
+    min-height: 100%;
+    background-color: $pure-blue;
+  }
+
+  h3 {
+    @include clear-content(15px);
+    @include font(24px, 38px);
+
+    position: relative;
+
+    font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
+    color: $pure-blue;
+  }
+
+  p {
+    @include clear-content(0);
+    @include font(16px, 22px);
+
+    color: $dark-gray;
+  }
+
+  svg {
+    margin-bottom: 12px;
+
+    fill: $pure-blue;
+  }
+
+  &:hover {
+    background-color: $pure-blue;
+
+    h3,
+    p {
+      color: $white;
+    }
+
+    svg {
+      fill: $white;
+    }
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $container) {
+  .advantages__item {
+    width: 48%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .advantages__container {
+    padding: 53px 25px 20px;
+  }
+
+  .advantages__list {
+    justify-content: center;
+  }
+
+  .advantages__item {
+    max-width: 345px;
+    min-height: auto;
+    padding: 24px 23px 21px;
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    svg {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin-bottom: 7px;
+    }
+
+    &--detective {
+      padding-bottom: 53px;
+
+      h3 {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .advantages__container {
+    margin-bottom: 34px;
+    padding: 37px 13px 0;
+  }
+
+  .advantages__item {
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 23px 15px 24px 28px;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    svg {
+      margin-bottom: 6px;
+    }
+
+    h3 {
+      @include font(20px, 28px);
+      margin-bottom: 8px;
+    }
+
+    &--hired {
+      padding: 26px 13px 29px 28px;
+    }
+
+    &--detective {
+      padding-bottom: 57px;
+
+      svg {
+        margin-bottom: 4px;
+      }
+
+      h3 {
+        margin-bottom: 17px;
+      }
+    }
+
+    &--tag {
+      svg {
+        margin-bottom: 4px;
+      }
+
+      h3 {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}
