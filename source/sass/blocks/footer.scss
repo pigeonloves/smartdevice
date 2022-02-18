@@ -1,0 +1,327 @@
+.footer {
+  position: relative;
+
+  min-height: 316px;
+  padding-top: 60px;
+
+  background-color: $very-light-gray;
+
+  a {
+    color: $dark-blue;
+
+    &:hover,
+    &:focus {
+      color: $pure-blue;
+    }
+
+    &:active {
+      color: $pure-blue;
+
+      opacity: 0.6;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 52px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $grayish-green;
+    opacity: 20%;
+  }
+}
+
+.footer__link {
+  svg {
+    fill: $social-grey;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $pure-blue;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $pure-blue;
+      opacity: 0.6;
+    }
+  }
+}
+
+.footer__content {
+  @include font(15px, 25px);
+
+  display: flex;
+  justify-content: space-between;
+  min-height: 215px;
+
+  color: $dark-blue;
+}
+
+.footer__links {
+  width: 20%;
+  padding-top: 2px;
+}
+
+.footer__logo {
+  margin-bottom: 47px;
+}
+
+.footer__social {
+  @include list-reset;
+
+  display: flex;
+
+  li:not(:last-child) {
+    margin-right: 14px;
+  }
+}
+
+.footer__menu {
+  flex-grow: 1;
+  width: 50%;
+  padding-left: 138px;
+}
+
+.footer__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  opacity: 50%;
+}
+
+.footer__item {
+  width: 44%;
+  margin-right: 20px;
+}
+
+.footer__contacts {
+  padding-left: 5px;
+
+  address {
+    font-style: normal;
+    opacity: 50%;
+  }
+}
+
+.footer__contacts-list {
+  @include list-reset;
+
+  a {
+    display: inline-block;
+
+    opacity: 50%;
+  }
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+
+  opacity: 50%;
+
+  p,
+  a {
+    @include clear-content(0);
+    @include font(13px, 24px);
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  a {
+    width: 33%;
+  }
+}
+
+.footer__bottom-copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 33%;
+}
+
+@media (min-width: $tablet) and (max-width: $container) {
+  .footer__menu {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .footer {
+    min-height: 457px;
+    padding-top: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 69px;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $grayish-green;
+      opacity: 20%;
+    }
+
+    &::after {
+      top: 96px;
+      bottom: auto;
+    }
+  }
+
+  .footer__container {
+    padding: 19px 25px 0;
+  }
+
+  .footer__content {
+    flex-wrap: wrap;
+    margin-bottom: 58px;
+  }
+
+  .footer__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 59px;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+  }
+
+  .footer__social {
+    padding-top: 5px;
+
+    li:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  .footer__menu {
+    width: 50%;
+    padding-left: 0;
+  }
+
+  .footer__list {
+    max-height: 100%;
+  }
+
+  .footer__item {
+    width: 100%;
+
+    &--about {
+      order: 0;
+    }
+
+    &--products {
+      order: 1;
+    }
+
+    &--production {
+      order: 2;
+    }
+
+    &--montage {
+      order: 3;
+    }
+
+    &--details {
+      order: 4;
+    }
+
+    &--delivery {
+      order: 5;
+    }
+
+    &--contacts {
+      order: 6;
+    }
+  }
+
+  .footer__contacts {
+    width: 50%;
+    padding-left: 17px;
+  }
+
+  .footer__bottom-copyright {
+    position: absolute;
+    top: 36px;
+    left: 330px;
+
+    letter-spacing: 0;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .footer {
+    &::before {
+      bottom: 98px;
+    }
+
+    &::after {
+      top: 258px;
+
+      box-shadow: 0 280px 0 0 $grayish-green;
+    }
+  }
+
+  .footer__container {
+    padding: 45px 15px 0;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    min-height: 170px;
+    margin-bottom: 73px;
+  }
+
+  .footer__menu {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+
+  .footer__list {
+    padding-top: 20px;
+  }
+
+  .footer__contacts {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      width: 100%;
+      margin-bottom: 20px;
+
+      text-align: center;
+    }
+  }
+
+  .footer__bottom-copyright {
+    top: 125px;
+    left: 50%;
+
+    width: 77%;
+
+    transform: translateX(-50%);
+  }
+}
