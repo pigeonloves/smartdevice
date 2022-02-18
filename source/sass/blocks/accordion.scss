@@ -1,0 +1,60 @@
+.accordion {
+  @include clear-content(24px);
+  @include font(15px, 16px);
+
+  position: relative;
+
+  font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  color: $dark-blue;
+  text-transform: uppercase;
+
+  background: none;
+  border: none;
+
+  &::after {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .accordion {
+    display: block;
+    width: 100%;
+    margin-bottom: 28px;
+
+    text-align: left;
+
+    &::after {
+      content: url("../img/plus.svg");
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 16px;
+      height: 16px;
+    }
+
+    &--active::after {
+      content: url("../img/minus.svg");
+      top: -5px;
+    }
+  }
+
+  .accordion__panel {
+    display: none;
+  }
+
+  .accordion__panel--hidden {
+    display: none;
+  }
+
+  .accordion__panel--visible,
+  .accordion__panel--no-js {
+    display: block;
+  }
+
+  .accordion__panel--active {
+    display: block;
+  }
+}
