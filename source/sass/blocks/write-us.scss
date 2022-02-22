@@ -1,0 +1,86 @@
+.write-us {
+  min-height: 670px;
+
+  background-color: $pure-blue;
+  background-image: url("../img/form-bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: right 36px;
+  background-size: contain;
+}
+
+.write-us__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 122px 0 95px;
+}
+
+.write-us__image {
+  position: relative;
+
+  width: 50%;
+
+  &::before {
+    content: url("../img/triangles.svg");
+    position: absolute;
+    top: -360px;
+    left: -175px;
+
+    max-width: 670px;
+    width: 100%;
+    height: 641px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -139px;
+    left: 0;
+
+    max-width: 511px;
+    width: 100%;
+    height: 288px;
+
+    background-image: url("../img/airplane@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/airplane@2x.png");
+    }
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $container) {
+  .write-us__image {
+    &::after {
+      left: -75px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .write-us {
+    min-height: 663px;
+
+    background-image: none;
+  }
+
+  .write-us__container {
+    padding: 0 87px 0 91px;
+  }
+
+  .write-us__image {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .write-us {
+    min-height: 640px;
+  }
+
+  .write-us__container {
+    padding: 0 15px;
+  }
+}
