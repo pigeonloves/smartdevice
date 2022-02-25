@@ -3,3 +3,17 @@
   flex-shrink: 1;
   flex-basis: 0;
 }
+
+.main-content__about-container {
+  background-color: $white;
+  background-image: url("../img/advantages-bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0 -32px;
+  background-size: cover;
+}
+
+@media (max-width: $mobile) {
+  .main-content__about-container {
+    background-image: none;
+  }
+}

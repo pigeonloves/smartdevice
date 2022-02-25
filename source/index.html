@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Smart Device | Печатные платы</title>
-    <link rel="preload" href="fonts/ptmono.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/roboto-condensed.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/pt-mono.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/roboto-condensed.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -22,7 +22,6 @@
             <use xlink:href="#icon-logo"></use>
           </svg>
         </a>
-
         <ul class="header__links">
           <li class="header__item header__item--email">
             <a class="header__link" href="mailto:info@sd.ru">
@@ -42,7 +41,7 @@
           </li>
         </ul>
 
-        <button class="button modal-overlay--open" type="button">Заказать звонок</button>
+        <button class="button modal--open" type="button">Заказать звонок</button>
       </div>
     </header>
 
@@ -52,8 +51,8 @@
           <div class="hero__text">
             <h1>Печатные платы</h1>
             <p>Производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-            <button class="button button--blue button--blue-big" type="button">Получить бесплатную консультацию</button>
-            <button class="button button--blue button--blue-small" type="button">Бесплатная консультация</button>
+            <button class="button button--blue button--blue-big" type="button" data-link="write-us">Получить бесплатную консультацию</button>
+            <button class="button button--blue button--blue-small" type="button" data-link="write-us">Бесплатная консультация</button>
           </div>
           <div class="hero__image">
             <picture>
@@ -75,10 +74,10 @@
       </section>
 
       <div class="main-content__about-container">
-        <section class="advantages" id="advantages">
+        <section class="advantages">
           <div class="container advantages__container">
             <h2 class=" visually-hidden">Преимущества</h2>
-            <ul class="advantages__list list-reset">
+            <ul class="advantages__list">
               <li class="advantages__item advantages__item--stopwatch">
                 <svg width="29" height="35">
                   <use xlink:href="#icon-stopwatch"></use>
@@ -93,8 +92,7 @@
                 <h3>Крупные поставщики</h3>
                 <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.</p>
               </li>
-              <li class="advantages__item
-              advantages__item--detective">
+              <li class="advantages__item advantages__item--detective">
                 <svg width="36" height="31">
                   <use xlink:href="#icon-detective"></use>
                 </svg>
@@ -125,7 +123,7 @@
       <section class="services">
         <div class="container services__container">
           <h2>Service Device предлагает следующие товары и&nbsp;услуги</h2>
-          <ul class="list-reset services__list">
+          <ul class="services__list">
             <li class="services__item">
               <a href="#">
                 <figure>
@@ -168,10 +166,10 @@
                 </figure>
               </a>
             </li>
-            <li class="services__item">
+            <li class="services__item catalog__item--detalies">
               <a href="#">
                 <figure>
-                  <figcaption>Комплектующие для светотехники</figcaption>
+                  <figcaption>Комплектующие для&nbsp;светотехники</figcaption>
                   <picture>
                     <!-- 1x: 290px; 2x: 580px -->
                     <source media="(max-width: 767px)" srcset="img/detalies-mobile@1x.webp 1x, img/detalies-mobile@2x.webp 2x" type="image/webp">
@@ -193,23 +191,24 @@
         </div>
       </section>
 
-      <section class="write-us" id="consultation">
+      <section class="write-us" id="write-us">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="container write-us__container">
+          <div class="write-us__image"></div>
           <form class="form form--write-us" action="https://echo.htmlacademy.ru" method="POST">
             <h3>Остались вопросы? Задайте их нам!</h3>
             <p>Мы проконсультируем Вас бесплатно</p>
-            <div class="form__area form__area--input">
+            <div class="form__area form__area--half">
               <label class="visually-hidden" for="name">Имя</label>
-              <input type="text" id="name" name="name" placeholder="Имя" required />
+              <input type="text" id="name" name="name" placeholder="Имя" required>
               <label class="visually-hidden" for="phone">Номер телефона</label>
-              <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="14" title="+7, не менее 7 и не более 10 цифр" required />
+              <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="14" title="+7, номер телефона должен состоять из 10 цифр" required>
             </div>
             <label class="visually-hidden" for="comment">Поле для ввода сообщения</label>
             <textarea name="comment" id="comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
             <div class="form__area form__area--submit">
               <button class="button button--submit" type="submit">Задать вопрос</button>
-              <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" checked="" required />
+              <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" checked="" required>
               <label for="agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
             </div>
           </form>
@@ -222,9 +221,11 @@
         <div class="footer__content">
           <section class="footer__links">
             <h2 class="visually-hidden">Cоциальные сети</h2>
-            <svg class="footer__logo" width="216" height="52">
-              <use xlink:href="#icon-logo-footer"></use>
-            </svg>
+            <a aria-label="Логотип проекта Smart Device">
+              <svg class="footer__logo" width="216" height="52">
+                <use xlink:href="#icon-logo-footer"></use>
+              </svg>
+            </a>
             <ul class="footer__social">
               <li>
                 <a class="footer__link" href="https://www.facebook.com" aria-label="Профиль в социальное сети «Фейсбук»">
@@ -251,8 +252,20 @@
           </section>
 
           <section class="footer__menu">
-            <button class="accordion" type="button" aria-label="Открыть выпадающий список" tabindex="-1">Разделы сайта</button>
-            <div class="accordion__panel accordion__panel--no-js">
+            <div class="accordion accordion--menu">
+              <h2>Разделы сайта</h2>
+              <button class="accordion-toggle accordion-toggle--menu" type="button" aria-label="Открыть выпадающий список" tabindex="-1">
+                <svg class="accordion-toggle__icon accordion-toggle__icon--open" width="24" height="24" role="img">
+                  <use xlink:href="#icon-plus"></use>
+                </svg>
+
+                <svg class="accordion-toggle__icon accordion-toggle__icon--close" width="24" height="24" role="img">
+                  <use xlink:href="#icon-minus"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="footer__list-wrap">
               <ul class="footer__list">
                 <li class="footer__item footer__item--about">
                   <a href="#">О компании</a>
@@ -280,17 +293,29 @@
           </section>
 
           <section class="footer__contacts">
-            <button class="accordion accordion--active" type="button" aria-label="Открыть выпадающий список" tabindex="-1">Наш офис</button>
-            <div class="accordion__panel accordion__panel--active">
+            <div class="accordion accordion--contacts">
+              <h2>Наш офис</h2>
+              <button class="accordion-toggle accordion-toggle--contacts" type="button" aria-label="Открыть выпадающий список" tabindex="-1">
+                <svg class="accordion-toggle__icon accordion-toggle__icon--open" width="24" height="24" role="img">
+                  <use xlink:href="#icon-plus"></use>
+                </svg>
+
+                <svg class="accordion-toggle__icon accordion-toggle__icon--close" width="24" height="24" role="img">
+                  <use xlink:href="#icon-minus"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="footer__contacts-wrap">
               <address>г. Мытищи, Олимпийский проспект,&nbsp;д.10</address>
               <ul class="footer__contacts-list">
-                <li class="footer__contacts-item">
+                <li>
                   <a href="tel:+74955894050">+7 (495) 589-40-50</a>
                 </li>
-                <li class="footer__contacts-item">
+                <li>
                   <a href="tel:+79250038767">+7 (925) 003-87-67</a>
                 </li>
-                <li class="footer__contacts-item">
+                <li>
                   <a href="tel:+792692608079"> +7 (926) 926-080-79</a>
                 </li>
               </ul>
@@ -309,5 +334,33 @@
         </section>
       </div>
     </footer>
+
+    <section class="modal">
+      <h2 class="visually-hidden">Форма заказа обратного звонка</h2>
+      <form class="form form--modal" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="modal__button">
+          <button class="modal__close" type="button" aria-label="Закрыть окно"></button>
+        </div>
+        <h3>Закажите звонок</h3>
+        <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+        <div class="form__area form__area--full">
+          <label class="visually-hidden" for="modal-name">Имя</label>
+          <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required>
+        </div>
+        <div class="form__area form__area--full">
+          <label class="visually-hidden" for="modal-phone">Номер телефона</label>
+          <input type="tel" id="modal-phone" name="modal-phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="14" title="+7, номер телефона должен состоять из 10 цифр" required>
+        </div>
+        <label class="visually-hidden" for="modal-comment">Поле для ввода сообщения</label>
+        <textarea id="modal-comment" name="modal-comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
+        <div class="form__area form__area--submit">
+          <button class="button button--submit" type="submit">Отправить</button>
+          <input class="visually-hidden" type="checkbox" id="modal-agreement" name="agreement" checked="" required>
+          <label for="modal-agreement">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </section>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
