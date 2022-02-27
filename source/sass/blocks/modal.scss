@@ -14,10 +14,6 @@
   &--show {
     display: block;
   }
-
-  &--open {
-    overflow: hidden;
-  }
 }
 
 .modal__button {
@@ -58,4 +54,8 @@
   &::after {
     transform: rotate(-45deg);
   }
+}
+
+.modal-open {
+  overflow: hidden;
 }

@@ -1,10 +1,6 @@
-.form {
+.write-us form,
+.modal form {
   color: $white;
-
-  &--write-us {
-    padding: 87px 0 0 0;
-    width: 570px;
-  }
 
   h3 {
     @include clear-content(8px);
@@ -117,7 +113,12 @@
   }
 }
 
-.form--modal {
+.write-us form {
+  padding: 87px 0 0 0;
+  width: 570px;
+}
+
+.modal form {
   position: absolute;
   top: 136px;
   left: 50%;
@@ -175,12 +176,9 @@
 }
 
 @media (max-width: $tablet) {
-  .form {
+  .write-us form,
+  .modal form {
     width: 100%;
-
-    &--write-us {
-      padding: 79px 0 0;
-    }
 
     h3 {
       @include font(32px, 45px);
@@ -205,13 +203,18 @@
     }
   }
 
-  .form--modal {
+  .write-us form {
+    padding: 79px 0 0;
+  }
+
+  .modal form {
     top: 20px;
   }
 }
 
 @media (max-width: $mobile) {
-  .form {
+  .write-us form,
+  .modal form {
     padding: 29px 0 0;
 
     h3 {
@@ -257,7 +260,7 @@
     }
   }
 
-  .form--modal {
+  .modal form {
     padding: 31px 38px 0;
   }
 }

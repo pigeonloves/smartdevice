@@ -3,7 +3,7 @@
 // Модальное окно
 
 (function () {
-  var modalOpen = document.querySelector('.modal--open');
+  var modalOpen = document.querySelector('.modal-open');
   var modalClose = document.querySelector('.modal__close');
   var modal = document.querySelector('.modal');
   var body = document.querySelector('body');
@@ -11,7 +11,7 @@
   var name = document.querySelector('[name=modal-name]');
   var phone = document.querySelector('[name=modal-phone]');
   var comment = document.querySelector('[name=modal-comment]');
-  var form = document.querySelector('.form--modal');
+  var form = modal.querySelector('form');
 
   var isStorage = true;
   var nameStorage = '';
@@ -28,10 +28,10 @@
 
   var setVisible = function (visible) {
     if (visible) {
-      body.classList.add('modal--open');
+      body.classList.add('modal-open');
       document.addEventListener('keydown', escapeClickHandler);
     } else {
-      body.classList.remove('modal--open');
+      body.classList.remove('modal-open');
       modal.classList.remove('modal--show');
       document.removeEventListener('keydown', escapeClickHandler);
     }
