@@ -1,26 +1,10 @@
 .header {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: -1;
-
-    width: 100%;
-    min-height: 878px;
-
-    background-color: $dark-blue;
-    background-image: url("../img/hero-bg-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    object-fit: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/hero-bg-desktop@2x.jpg");
-    }
-  }
+  width: 100%;
 }
 
 .header__container {
@@ -30,9 +14,17 @@
   padding-top: 31px;
 }
 
+.header__logo-link {
+  margin-right: 50px;
+}
+
 .header__logo {
   width: 202px;
   height: 52px;
+}
+
+.header__logo-mobile {
+  display: none
 }
 
 .header__links {
@@ -42,7 +34,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  min-width: 31%;
+  min-width: 30.5%;
   margin: 0 50px 0 auto;
 }
 
@@ -167,13 +159,11 @@
   }
 
   .header__logo {
-    width: 148px;
-    height: 38px;
+    display: none;
   }
 
-  .header__logo-title,
-  .header__logo-text {
-    display: none;
+  .header__logo-mobile {
+    display: block;
   }
 
   .header__links {
@@ -189,4 +179,12 @@
       margin-right: 8px;
     }
   }
+
+  .header__item:first-of-type .header__link {
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+
 }

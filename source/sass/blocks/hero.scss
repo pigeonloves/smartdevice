@@ -1,15 +1,36 @@
 .hero {
   position: relative;
 
-  min-height: 793px;
+  min-height: 878px;
 
   color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    width: 100%;
+    min-height: 882px;
+
+    background-color: $dark-blue;
+    background-image: url("../img/hero-bg-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    object-fit: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-bg-desktop@2x.jpg");
+    }
+  }
 }
 
 .hero__container {
   display: flex;
   justify-content: space-between;
-  padding-top: 222px;
+  padding-top: 309px;
 }
 
 .hero__image {
@@ -19,8 +40,8 @@
 
   img {
     position: absolute;
-    top: -51px;
-    right: -69px;
+    top: -48px;
+    right: -72px;
     z-index: 0;
 
     max-width: 705px;
@@ -59,6 +80,8 @@
     @include clear-content(23px);
     @include font(80px, 106px);
 
+    margin-left: -4px;
+
     font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -66,12 +89,14 @@
   }
 
   p {
-    @include clear-content(45px);
+    @include clear-content(43px);
     @include font(22px, 34px);
 
     position: relative;
 
     padding-left: 92px;
+
+    text-transform: lowercase;
 
     &::before {
       content: "";
@@ -117,7 +142,7 @@
 
 @media (max-width: $tablet) {
   .hero {
-    min-height: 612px;
+    min-height: 686px;
   }
 
   .hero__image {
@@ -143,7 +168,7 @@
   }
 
   .hero__container {
-    padding: 110px 0 0 88px;
+    padding: 187px 0 0 88px;
   }
 
   .hero__text {
@@ -152,17 +177,17 @@
     h1 {
       @include font(60px, 72px);
       margin-bottom: 26px;
+      margin-left: 0;
     }
 
     p {
       @include font(18px, 28px);
-      margin-bottom: 57px;
+      margin-bottom: 56px;
       padding-left: 50px;
 
       &::before {
-        top: 19px;
-
-        width: 36px;
+        top: 16px;
+        width: 33px;
       }
     }
   }
@@ -174,7 +199,7 @@
 
 @media (max-width: $mobile) {
   .hero {
-    min-height: 592px;
+    min-height: 647px;
   }
 
   .hero__image {
@@ -207,7 +232,7 @@
   .hero__container {
     flex-wrap: wrap;
 
-    padding: 227px 0 0 18px;
+    padding: 286px 0 0 16px;
   }
 
   .hero__text {
@@ -222,7 +247,7 @@
     p {
       @include font(16px, 25px);
 
-      margin-bottom: 41px;
+      margin-bottom: 40px;
 
       &::before {
         top: 15px;

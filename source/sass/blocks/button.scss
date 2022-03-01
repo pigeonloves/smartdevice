@@ -3,7 +3,7 @@
 
   display: inline-block;
   min-height: 45px;
-  padding: 14px 32px 12px;
+  padding: 14px 26px 12px;
 
   font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
   font-weight: 700;
@@ -28,10 +28,14 @@
     opacity: 0.6;
   }
 
+  &--hero {
+    min-width: 180px
+  }
+
   &--blue {
     @include font(16px, 21px);
 
-    margin-left: 92px;
+    margin-left: 95px;
     padding: 16px 45px;
 
     letter-spacing: 0.05em;
@@ -40,7 +44,7 @@
     border: none;
 
     @media (max-width: $tablet) {
-      margin-left: 51px;
+      margin-left: 53px;
       padding: 16px 30px;
     }
 
@@ -56,7 +60,7 @@
   }
 
   &--blue-border {
-    padding: 12px 52px;
+    padding: 12px 50px;
 
     color: $pure-blue;
 
@@ -74,6 +78,7 @@
 @media (max-width: $mobile) {
   .button--blue-small {
     display: inline-block;
+    padding: 16px 34px;
   }
 
   .button--blue-big {

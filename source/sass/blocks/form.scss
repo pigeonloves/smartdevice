@@ -36,7 +36,7 @@
   }
 
   input {
-    padding: 16px;
+    padding: 16px 20px;
   }
 
   textarea {
@@ -114,8 +114,10 @@
 }
 
 .write-us form {
-  padding: 87px 0 0 0;
   width: 570px;
+  margin-right: -2px;
+  padding: 0;
+  padding-top: 87px;
 }
 
 .modal form {
@@ -205,6 +207,10 @@
 
   .write-us form {
     padding: 79px 0 0;
+
+    textarea {
+      margin-bottom: 43px;
+    }
   }
 
   .modal form {
@@ -246,6 +252,12 @@
 
     input[type="checkbox"]:checked + label::after {
       left: 5px;
+    }
+  }
+
+  .write-us form {
+    input {
+      padding: 16px 16px 19px;
     }
   }
 
