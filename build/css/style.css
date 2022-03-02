@@ -619,22 +619,12 @@ a {
   position: relative;
   min-height: 878px;
   color: #ffffff;
-  background-color: #1b2d37; }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    min-height: 882px;
-    background-image: url("../img/hero-bg-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    -o-object-fit: cover;
-       object-fit: cover; }
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      .hero::before {
-        background-image: url("../img/hero-bg-desktop@2x.jpg"); } }
+  background-color: #1b2d37;
+  background-image: url("../img/hero-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 .hero__container {
   display: -webkit-box;

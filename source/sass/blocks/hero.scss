@@ -6,25 +6,11 @@
   color: $white;
   background-color: $dark-blue;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: 1;
+  background-image: url("../img/hero-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    width: 100%;
-    min-height: 882px;
-
-    background-image: url("../img/hero-bg-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    object-fit: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/hero-bg-desktop@2x.jpg");
-    }
-  }
+  object-fit: cover;
 }
 
 .hero__container {
