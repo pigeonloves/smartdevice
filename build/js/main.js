@@ -204,7 +204,6 @@
     [].forEach.call(document.querySelectorAll('[type=tel]'), function (input) {
         var keyCode;
         function mask(evt) {
-            // evt.keyCode && (keyCode = evt.keyCode);
             var pos = input.selectionStart;
             if (pos < 3) {
                 evt.preventDefault();
@@ -218,7 +217,6 @@
             });
             i = newValue.indexOf('_');
             if (i !== -1) {
-                // i < 5 && (i = 3);
                 newValue = newValue.slice(0, i);
             }
             var reg = matrix.substr(0, input.value.length).replace(/_+/g, function (a) {
@@ -236,30 +234,5 @@
         input.addEventListener('focus', mask, false);
         input.addEventListener('blur', mask, false);
         input.addEventListener('keydown', mask, false);
-    });    // var phoneNumber = document.querySelectorAll('[type=tel]');
-           // var setMask = function (input) {
-           //   input.addEventListener('focus', function (evt) {
-           //     if (!input.value && evt.key !== window.utils.KeyCode.BACKSPACE) {
-           //       input.value = '+7(';
-           //     } else {
-           //       return;
-           //     }
-           //   });
-           //   input.addEventListener('keydown', function (evt) {
-           //     var numberLength = input.value.length;
-           //     if (numberLength === 6 && evt.key !== window.utils.KeyCode.BACKSPACE) {
-           //       input.value = input.value + ')';
-           //     }
-           //   });
-           //   input.addEventListener('keypress', function (evt) {
-           //     if (!/\d/.test(evt.key)) {
-           //       evt.preventDefault();
-           //     }
-           //   });
-           // };
-           // if (phoneNumber) {
-           //   for (var i = 0; i < phoneNumber.length; i++) {
-           //     setMask(phoneNumber[i]);
-           //   }
-           // }
+    });
 }());
