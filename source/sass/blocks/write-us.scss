@@ -20,17 +20,6 @@
 
   width: 50%;
 
-  &::before {
-    content: url("../img/triangles.svg");
-    position: absolute;
-    top: -360px;
-    left: -175px;
-
-    max-width: 670px;
-    width: 100%;
-    height: 641px;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -59,11 +48,33 @@
   }
 }
 
+.write-us form {
+  position: relative;
+  z-index: 5;
+
+  &::before {
+    content: url("../img/triangles.svg");
+    position: absolute;
+    top: -10%;
+    left: -141%;
+    z-index: 1;
+
+    width: 611px;
+    height: 486px;
+  }
+}
+
 @media (max-width: $tablet) {
   .write-us {
     min-height: 663px;
 
     background-image: none;
+  }
+
+  .write-us form {
+    &::before {
+      display: none;
+    }
   }
 
   .write-us__container {

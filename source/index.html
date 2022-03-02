@@ -206,7 +206,7 @@
               <label class="visually-hidden" for="name">Имя</label>
               <input type="text" id="name" name="name" placeholder="Имя" required>
               <label class="visually-hidden" for="phone">Номер телефона</label>
-              <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="14" title="+7, номер телефона должен состоять из 10 цифр" required>
+              <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="18" title="+7, номер телефона должен состоять из 10 цифр" required>
             </div>
             <label class="visually-hidden" for="comment">Поле для ввода сообщения</label>
             <textarea name="comment" id="comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
@@ -226,10 +226,13 @@
           <section class="footer__links">
             <h2 class="visually-hidden">Cоциальные сети</h2>
             <a href="#" aria-label="Логотип проекта Smart Device">
-              <svg class="footer__logo" width="216" height="52">
+              <svg class="footer__logo" width="202" height="52">
                 <use xlink:href="#icon-logo-footer"></use>
               </svg>
             </a>
+            <p class="footer__links-copyright">
+              1999-2018&nbsp;SD&nbsp;Service&nbsp;Devices
+            </p>
             <ul class="footer__social">
               <li>
                 <a class="footer__link" href="https://www.facebook.com" aria-label="Профиль в социальное сети «Фейсбук»">
@@ -327,7 +330,9 @@
           </section>
         </div>
 
-        <section class="footer__bottom">
+      </div>
+      <section class="footer__bottom">
+        <div class="footer__bottom-container">
           <h2 class="visually-hidden">Копирайт</h2>
           <p class="footer__bottom-copyright">
             <span>Все права защищены</span>
@@ -335,13 +340,12 @@
           </p>
           <a href="#">Условия конфиденциальности</a>
           <p>Developed by <a href="#">wow studio</a></p>
-        </section>
-      </div>
+        </div>
+      </section>
     </footer>
 
     <section class="modal form">
       <h2 class="visually-hidden">Форма заказа обратного звонка</h2>
-      <!-- <form class="form form--modal" action="https://echo.htmlacademy.ru" method="POST"> -->
       <form  action="https://echo.htmlacademy.ru" method="POST">
         <div class="modal__button">
           <button class="modal__close" type="button" aria-label="Закрыть окно"></button>
@@ -354,7 +358,7 @@
         </div>
         <div class="form__area form__area--full">
           <label class="visually-hidden" for="modal-phone">Номер телефона</label>
-          <input type="tel" id="modal-phone" name="modal-phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="14" title="+7, номер телефона должен состоять из 10 цифр" required>
+          <input type="tel" id="modal-phone" name="modal-phone" placeholder="Телефон" pattern="\+7(\([0-9]{3}\))([0-9]{7})" maxlength="18" title="+7, номер телефона должен состоять из 10 цифр" required>
         </div>
         <label class="visually-hidden" for="modal-comment">Поле для ввода сообщения</label>
         <textarea id="modal-comment" name="modal-comment" rows="4" cols="35" placeholder="Ваш вопрос"></textarea>
